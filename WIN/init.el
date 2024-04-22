@@ -12,8 +12,25 @@
 
 (remove-hook 'minibuffer-setup-hook 'my-minibuffer-setup)
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'earth-light t)
+(add-to-list 'exec-path "c:/Apps/ProgramFiles/node-v20.10.0-win-x64")
+(add-to-list 'exec-path  "c:/Apps/ProgramFiles/Portable Python-3.10.5 x64/App/Python")
+(add-to-list 'exec-path  "c:/Apps/ProgramFiles/Portable Python-3.10.5 x64/App/Python/Scripts")
+;(add-to-list 'exec-path  "c:/msys64/ucrt64/bin")
+(add-to-list 'exec-path  "c:/Docs/Ref/zeal-0.7.0-portable-windows-x64")
+(add-to-list 'exec-path  "c:/Apps/Bin/emacs-29.3/bin")
+(add-to-list 'exec-path  "c:/Apps/ProgramFiles/GitIgnore")
+(add-to-list 'exec-path  "c:/Apps/ProgramFiles/apache-maven-3.9.6/bin")
+(add-to-list 'exec-path  "c:/msys64/usr/bin")
+(add-to-list 'exec-path  "c:/msys64/home/Lebo/apps/micro/micro-2.0.11")
+(add-to-list 'exec-path  "c:/Apps/ProgramFiles/kotlin/kotlinc-1.9.20/bin")
+(add-to-list 'exec-path  "c:/Apps/ProgramFiles/jdk-17.0.9/bin")
+(add-to-list 'exec-path  "c:/Apps/ProgramFiles/PortableGit/bin")
+
+(setq python-shell-exec-path "c:/Apps/ProgramFiles/Portable Python-3.10.5 x64/App/Python/")
+
+(add-to-list 'custom-theme-load-path "c:/Apps/ProgramData/Emacs/themes")
+(load-theme 'Madrid-pop-dark t)
+; ################# FUNCTIONS  ##########################
 
 ; ################  VARIABLES  ##########################
 
@@ -28,20 +45,20 @@
 ;; Set visual bell
 (setq visual-bell t)
 
-(set-face-attribute 'default nil :font "Cascadia Mono" :height 100)
+(set-face-attribute 'default nil :font "Cascadia Code" :height 100)
 
 
 ;; ###############  KEYBINDINGS  #####################
 
 ;; Make ECS quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-S-c") 'eshell)
-(global-set-key (kbd "C-x C-g") 'goto-line)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-x C-g") 'goto-line)
+(global-set-key (kbd "C-S-c") 'eshell)
 
-;; (require 'packages)
+;; (Require 'Packages)
 
 ; Display line numer and column number 
 (display-line-numbers-mode)
@@ -104,15 +121,14 @@
 (unless (package-installed-p 'all-the-icons)
   (setq  new-all-icons-new-loadup t))
 
+(unless (equal new-all-icons-new-loadup nil)
+  (nerd-icons-install-fonts)
+  (all-the-icons-install-fonts)
+)
 
 (use-package all-the-icons
   :ensure t
   :if (display-graphic-p))
-
-(unless (equal new-all-icons-new-loadup nil)
-  (all-the-icons-install-fonts)
-  ;(nerd-icons-install-fonts)
-)
 
 (use-package all-the-icons-dired
   :hook (dired-mode . (lambda () (all-the-icons-dired-mode t)
@@ -150,28 +166,6 @@
   :config
   (projectile-mode 1))
 
-;; Dashboard
-;; (use-package dashboard
-;;   :ensure t
-;;   :init
-;;   (setq initial-buffer-choice 'dashboard-open)
-;;   (setq dahsboard-set-heading-icons t)
-;;   (setq dashboard-set-file-icons t)
-;;   (setq dashboard-banner-logo-title "More Than a Text Editor")
-;;   (setq dashboard-starup-banner 'logo)
-;;   ;;(setq dashboard-startup-banner "path to pickture") ;; use custon banner
-;;   (setq dashboard-center-content nil)
-;;   (setq dashbboard-items '(
-;;     (recents . 5)
-;;     (agenda . 5)
-;;     (bookmarks . 3)
-;;     (projects . 5)))
-;;   (dashboard-modify-heading-icons '(
-;;     (recents . "file-text")
-;;     (bookkmarks . "book")))
-;;   :config
-;;   (dashboard-setup-startup-hook))
-
 (unless (package-installed-p 'dashboard)
   (package-install 'dashboard))
 
@@ -186,8 +180,7 @@
   (recents . 5)
   (agenda . 5)
   (bookmarks . 3)
-  (projects . 5)))
-
+  (projects . 3)))
 
 (dashboard-setup-startup-hook)
 
@@ -209,27 +202,19 @@
   :hook (company-mode . company-box-mode))
 
 
-; ESHELL 
+;; # Eshell 
+(use-package eshell-syntax-highlighting)
+
+
 (setq eshell-rc-script (concat user-emacs-directory "eshell/profile")
       eshell-aliases-file (concat user-emacs-directory "eshell/aliases")
-      eshell-scoll-to-bottom-on-input t
-      eshell-destroy-buffer-when-process-dies t)
+      esehll-history-size 200
+      eshell-buffer-maximum-lines 5000
+      esehll-hist-ignoredups t
+      eshell-scroll-to-bottom-on-input t
+      eshell-destroy-buffer-when-process-dies t
+      eshell-visual-commands '("bash", "fish", "htop", "ssh", "top","zsh"))
 
-(use-package markdown-mode
-  :ensure t
-  :mode ("FEADME\\.md\\" . gfm-mode)
-  :init (setq markdown-command "multimarkdown"))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ispell-dictionary nil)
- '(package-selected-packages
-   '(markdown-mode use-package rainbow-mode rainbow-delimiters projectile magit glsl-mode doom-modeline dashboard counsel company-box command-log-mode all-the-icons-dired)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(setq shell-file-name "c:/Apps/Bin/emacs-29.3/libexec/emacs/29.3/x86_64-w64-mingw32/cmdproxy.exe"); "C:/WINDOWS/system32/cmd.exe" 
+
+(add-hook 'eshell-preoutput-filter-functions 'ansi-color-apply)

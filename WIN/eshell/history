@@ -1,0 +1,128 @@
+cp -r no3/* no4
+cd no4 
+ls
+clear
+ls
+find-file main.py
+clear
+command -v python
+which -v python
+which python
+clear
+which python
+echo $PATH
+exit
+python main.py 
+clear
+which python
+exit
+which python
+exit
+exit
+which python
+exit
+which python
+exit
+which python
+echo $PATH
+exit
+which python
+python --help
+clear
+exit
+python main.py
+clear
+exit
+c:/Apps/ProgramFiles/Portable Python-3.10.5 x64/App/Python/python/python.exe --help
+"c:/Apps/ProgramFiles/Portable Python-3.10.5 x64/App/Python/python/python.exe" --help
+c:/Apps/ProgramFiles/Portable\ Python-3.10.5\ x64/App/Python/python/python --help
+cmd
+which cmd
+pwsh
+exit
+which python
+clear
+which python
+exit
+which python
+clear
+exit
+which python
+clear
+exit
+python main.py 
+cmdproxy
+clear
+exit
+ls
+clear
+python main.py 
+which python
+which python
+echo $PATH
+clear
+exit
+which python
+clear
+which python
+echo $PATH
+clear
+which python
+which python
+clear
+exit
+which python
+clear
+find-file
+exit
+python no2.py 
+mvn clean test
+git status
+clear
+exit
+git status
+git status
+clear
+ecit
+exti
+exit
+ls
+git
+clear
+exit
+mvn clean test
+clear
+mvn clean test
+ls
+cd EmacsInit/
+ls
+mv * ./Pop_OS
+ls
+mkdir ./Pop_OS
+mv * ./Pop_OS
+ls
+cd Pop_OS/
+ls
+cd ..
+mkdir WIN
+mv Pop_OS/ LINUX
+ls
+ls LINUX/
+clear
+cd LINUX/
+clear
+ls -la
+clear
+cd ..
+clear
+ls LINUX/
+ls ..
+cd ..
+mv EmacsInit/ ../EmacsInit
+ls
+cd .. 
+ls
+cd New\ folder/
+ls
+mv ../.emacs.d/EmacsInit/ ./EmacsInit
+exit

@@ -1,0 +1,14 @@
+
+addpath c:/Apps/ProgramFiles/node-v20.10.0-win-x64
+addpath c:/msys64/ucrt64/bin
+addpath c:/Apps/ProgramFiles/Portable\ Python-3.10.5\ x64/App/Python
+addpath c:/Apps/ProgramFiles/Portable\ Python-3.10.5\ x64/App/Python/Scripts
+addpath c:/Docs/Ref/zeal-0.7.0-portable-windows-x64
+addpath c:/Apps/Bin/emacs-29.3/bin
+addpath c:/Apps/ProgramFiles/GitIgnore
+addpath c:/Apps/ProgramFiles/apache-maven-3.9.6/bin
+addpath c:/msys64/usr/bin
+addpath c:/msys64/home/Lebo/apps/micro/micro-2.0.11
+addpath c:/Apps/ProgramFiles/kotlin/kotlinc-1.9.20/bin
+addpath c:/Apps/ProgramFiles/jdk-17.0.9/bin
+addpath c:/Apps/ProgramFiles/PortableGit/bin
