@@ -1,0 +1,15 @@
+*~
+#*#
+
+session*
+
+transient
+transient/*
+
+projectile-bookmarks.eld
+
+elpa
+elpa/*
+
+auto-save-list
+auto-save-list/*

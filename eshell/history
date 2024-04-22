@@ -1,0 +1,128 @@
+mvn clean test
+clear
+mvn clean test
+clear
+mvn clean test
+clear
+mvn clean test
+clear
+mvn clean test
+clear
+mvn clean exec:java
+mvn clean exec:java
+clear
+mvn clean compile
+clear
+mvn clean test
+clear
+mvn clean test
+mvn clean test
+clear
+mvn clean exec:java
+mvn clean exec:java
+clear
+mvn clean exec:java
+mvn clean compile
+ls target/
+ls target/classes/
+ls target/classes/wethinkcode/
+ls target/classes/wethinkcode/movies/
+ls target/classes/wethinkcode/movies/v1/
+mvn exec:java
+clear
+mvn clean compile exec:java
+mvn clean compile exec:java
+clear && mvn clean compile exec:java
+mvn clean compile exec:java
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+mvn clean compile exec:java
+clear
+mvn clean test
+mvn clean test
+clear
+mvn clean test
+mvn clean test
+clear
+mvn clean compile exec:java
+mvn clean compile exec:java
+mvn clean compile exec:java
+mvn clean compile exec:java
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+mvn clean compile exec:java
+clear
+mvn clean compile exec:java
+clear
+mvn clean test
+clear
+mvn clean test
+magit
+magit
+clear
+find-file .gitignore
+git add .
+git commit -m "Final submit"
+git push
+clear
+wtc-lms problems heavy-slim-mind
+wtc-lms start cute-handy-bot-one
+git clone git@gitlab.wethinkco.de:mmokhwibitjane023b/submission-oop-java-explorerbot1.gitcd ..
+clear
+cd ..
+git clone git@gitlab.wethinkco.de:mmokhwibitjane023b/submission-oop-java-explorerbot1.git
+cd submission-oop-java-explorerbot1/
+clear
+find-file pom.xml 
+clear
+clear
+exit
+clear
+ls
+git init
+git --config
+git --config user.name 
+git config --user.name 
+clear
+git config --local --user.name Lebohang 
+git config --local --user 
+git config --local
+clear
+git config --local user.name 
+git config --local user.name Lebohang
+git config --local user.email lebohangmokhwibitjane@gmail.com
+git config --local user.name 
+git config --local user.email 
+clear
+git status
+ls transient/
+find-file .gitignore
+find-file .gitignore
+find-file projectile-bookmarks.eld 
+find-file projectile-bookmarks.eld 
+ls elpa
