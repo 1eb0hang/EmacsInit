@@ -1,4 +1,4 @@
-
+(load-file "./share.el")
 
 ;; Put cursor on "mode-line-format" and enter C-h v for more help
 (setq-default mode-line-format
@@ -43,3 +43,28 @@
 
 ;; setq only effects  current buffer
 ;; to set all buffers automatically use "setq-default"
+
+;; Modeline info
+;;   - file icon (coloured if modified)
+;;   - current file name
+;;   - filel inmber and column
+;;   - Major-mode
+;;   - git branch
+
+(setq something (eval 'major-mode))
+
+(setq mode-line-format
+	      '("%e"
+		" " ;; TODO : icon
+		"%b"
+		"  "
+		"%l"
+		":"
+		;; (:eval 
+		;;  (number-to-string (+ (string-to-number "%c") 1)))
+		"%c"
+		"  "
+		mode-name
+))
+
+

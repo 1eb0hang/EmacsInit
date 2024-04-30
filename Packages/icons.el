@@ -1,3 +1,4 @@
+(load-file "./share.el")
 
 (add-to-list 'image-load-path (concat current-dir "Fonts/Icons/fether(1)"))
 
