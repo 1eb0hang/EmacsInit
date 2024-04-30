@@ -1,4 +1,11 @@
 ; sets emacs to start at full screen
+
+;; TODO: Get actual file-path
+
+(add-to-list 'load-path "~/Dev/emacs/EmacsInit/Packages")
+
+(require )
+
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup)
