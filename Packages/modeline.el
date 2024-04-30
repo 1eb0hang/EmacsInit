@@ -51,8 +51,6 @@
 ;;   - Major-mode
 ;;   - git branch
 
-(setq something (eval 'major-mode))
-
 (setq mode-line-format
 	      '("%e"
 		" " ;; TODO : icon
@@ -65,6 +63,8 @@
 		"%c"
 		"  "
 		mode-name
+		"  "
+		(vc-mode vc-mode)
 ))
 
 
