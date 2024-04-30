@@ -37,9 +37,16 @@
 
 (setq mode-line-format
       '(:eval
-       (list
-	'(:propertize "%b" help-echo (buffer-file-name))
-       )))
+	(list
+	 '(:propertize "%b" help-echo (buffer-file-name))
+	 )))
 
 ;; setq only effects  current buffer
 ;; to set all buffers automatically use "setq-default"
+
+(setq-default mode-line-format
+	      '(:eval
+		(list
+		 (:propertize "%b" help-echo (buffer-file-name))
+		 (when (buffer-modified-p))
+		 )))
